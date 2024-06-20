@@ -9,7 +9,6 @@ Installation
 Usage
 Project Structure
 Contributing
-License
 Acknowledgements
 Introduction
 The Hooyo Shop Management System allows users to manage their products, orders, It provides an easy-to-use interface for adding, viewing, and deleting products and orders, as well as creating and managing user accounts in the CLI.
