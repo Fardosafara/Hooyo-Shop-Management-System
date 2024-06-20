@@ -1,0 +1,40 @@
+/* static/css/style.css */
+
+/* Import Tailwind CSS */
+@import "https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css";
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+footer {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: aquamarine;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 35px;
+}
+
+nav {
+    padding: 0.5rem 1rem; 
+}

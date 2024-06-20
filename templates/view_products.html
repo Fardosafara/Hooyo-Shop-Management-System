@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="bg-white p-8 rounded shadow-md">
+        <h2 class="text-2xl font-bold mb-4">View Products</h2>
+        <table class="w-full">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Product ID</th>
+                    <th class="px-4 py-2">Name</th>
+                    <th class="px-4 py-2">Quantity</th>
+                    <th class="px-4 py-2">UOM</th>
+                    <th class="px-4 py-2">Price ksh</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                    <tr>
+                        <td class="border px-4 py-2">{{ product.id }}</td>
+                        <td class="border px-4 py-2">{{ product.name }}</td>
+                        <td class="border px-4 py-2">{{ product.quantity }}</td>
+                        <td class="border px-4 py-2">{{ product.uom }}</td>
+                        <td class="border px-4 py-2">{{ product.price }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
