@@ -1,108 +1,89 @@
-# Hooyo-Shop-Management-System
-Hooyo Shop Management System
-Hooyo is a Somali word meaning "mom." This project is dedicated to my mom and to all the hardworking moms out there. The Hooyo Shop Management System is a web-based application designed to manage products, orders, and users for small shops and businesses.
+# Hooyo's Shop Management System CLI
+Welcome to Hooyo's Shop Management System CLI, a command-line interface for managing products, orders, and users in a shop setting. This CLI tool allows users to perform various tasks such as adding and deleting products, managing orders, and handling user accounts.
+Hooyo is a Somali word meaning "mom." This project is dedicated to my mom and to all the hardworking moms out there.
 
-Table of Contents
-Introduction
-Features
-Installation
-Usage
-Project Structure
-Contributing
-Acknowledgements
-Introduction
-The Hooyo Shop Management System allows users to manage their products, orders, It provides an easy-to-use interface for adding, viewing, and deleting products and orders, as well as creating and managing user accounts in the CLI.
+## Table of Contents
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Commands](#commands)
+   - [Main Menu](#main-menu)
+   - [Product Management](#product-management)
+   - [Order Management](#order-management)
+   - [User Management](#user-management)
+5. [Dependencies](#dependencies)
+6. [Contributing](#contributing)
 
-Features
-Product Management: Add, view, and delete products.
-Order Management: Create and view orders with customer details and total cost.
-User Management: Create user accounts with authentication.
-CLI Integration: Manage products and orders through a command-line interface.
-Installation
-Prerequisites
-Python 3.6 or higher
-SQLite
-Setup
-Clone the repository:
+## Features
 
-sh
-Copy code
-git clone https://github.com/Fardosafara/hooyo-shop-management-system
-cd hooyo-shop-management-system
-Create a virtual environment:
+- **Product Management**: Add, delete, view, and find products.
+- **Order Management**: Create new orders and view existing orders.
+- **User Management**: Create and view users.
 
-sh
-Copy code
-python3 -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install the required packages:
+## Installation
 
-sh
-Copy code
-pip install -r requirements.txt
-Set up the database:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/fardosafara/hooyo-shop-management-system.git
+   cd hooyo-shop-management-cli
+   ```
 
-sh
-Copy code
-python db_connect.py
-Run the Flask application:
+2. Set up the database:
+   ```bash
+   python db_connect.py
+   ```
 
-sh
-Copy code
-python app.py
+## Usage
+
 Run the CLI:
+```bash
+python main.py
+```
 
-sh
-Copy code
-python cli.py
-Usage
-Web Interface
-Home Page: Navigate to http://127.0.0.1:5000/ to access the home page.
-Add Product: Navigate to http://127.0.0.1:5000/add_product to add new products.
-View Products: Navigate to http://127.0.0.1:5000/view_products to view all products.
-Delete Product: Navigate to http://127.0.0.1:5000/delete_product_list to delete products.
-Create Order: Navigate to http://127.0.0.1:5000/new_order to create a new order.
-View Orders: Navigate to http://127.0.0.1:5000/orders to view all orders.
-CLI Interface
-Main Menu: Run python cli.py to start the CLI and navigate through the options to manage products, orders, and users.
-Project Structure
-plaintext
-Copy code
-hooyo-shop-management/
-│
-├── models/
-│   ├── __init__.py
-│   ├── product.py
-│   ├── order.py
-│   ├── order_item.py
-│   └── user.py
-│
-├── templates/
-│   ├── base.html
-│   ├── index.html
-│   ├── add_product.html
-│   ├── view_products.html
-│   ├── delete_product.html
-│   ├── orders.html
-│   ├── new_order.html
-│   └── profile.html
-│
-├── static/
-│   ├── css/
-│   ├── images/
-│   └── js/
-│
-├── db_connect.py
-├── app.py
-├── cli.py
-├── helper.py
-└── README.md
-Contributing
-Fork the repository
-Create a new branch
-Make your changes
-Submit a pull request
+Follow the on-screen prompts to navigate through the menu and perform various tasks.
 
-Acknowledgements
-This project is dedicated to my mom and all hardworking moms.
+## Commands
+
+### Main Menu
+
+- **1. Manage Products**: Navigate to product management.
+- **2. Manage Orders**: Navigate to order management.
+- **3. User Management**: Navigate to user management.
+- **4. Exit**: Exit the application.
+
+### Product Management
+
+- **1. Add Product**: Add a new product to the inventory.
+- **2. Delete Product**: Delete an existing product by ID.
+- **3. View All Products**: View all products in the inventory.
+- **4. Find Product by ID**: Find a specific product by its ID.
+- **5. Back to Main Menu**: Return to the main menu.
+
+### Order Management
+
+- **1. View Orders**: View all existing orders.
+- **2. New Order**: Create a new order.
+- **3. Back to Main Menu**: Return to the main menu.
+
+### User Management
+
+- **1. Create User**: Create a new user account.
+- **2. View Users**: View all user accounts.
+- **3. Back to Main Menu**: Return to the main menu.
+
+## Dependencies
+
+- `sqlalchemy`
+- `datetime`
+- `db_connect`
+- `models` (Product, Order, OrderItem)
+- `helper` (authenticate_user, create_user, view_users, get_user_input, get_secure_input, validate_password)
+
+Make sure to install these dependencies using `pip` as mentioned in the installation section.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request for review.
+
+
 
